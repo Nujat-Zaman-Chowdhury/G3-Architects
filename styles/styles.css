@@ -19,6 +19,8 @@
 }
 .text-light-grey{
     color: #727272;  
+    margin-top: 20px;
+    margin-bottom: 20px;
     
    
 }
@@ -26,6 +28,7 @@
     color: #131313;
     font-size: 2.5rem;
     font-weight: 700;
+    
 }
 
 
@@ -87,7 +90,8 @@ nav li a{
 /* main styles */
 main{
     max-width: 1440px;
-    margin: 70px;
+    /* margin: 70px; */
+    padding: 100px;
     
 }
 
@@ -96,7 +100,7 @@ main{
     display: flex;
     /* justify-content: center; */
     align-items: center;
-    padding: 0 100px;
+    /* padding: 0 100px; */
     margin: 0 auto;
     
 }
@@ -128,6 +132,9 @@ main{
 }
 
 /* facts section */
+.facts{
+    margin-top: 130px;
+}
 .facts-card-container .card{
     border-radius: 8px;
     border: 1px solid #FF900E;
@@ -152,13 +159,32 @@ main{
     
 }
 
+/* sponsors styles */
+.sponsors{
+    text-align: center;
+    margin-top: 130px;
+}
+.sponsors-img-container{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 50px;
+    gap: 20px;
+}
+.sponsors-img-container img{
+    width: 165px;
+}
+
 /* responsive media queries */
 /* mobile devices */
 @media screen and (max-width: 576px) {
+    main{
+        padding: 30px;
+    }
     header{
         padding: 20px;
     }
-    nav, .teams-container{
+    nav, .teams-container, .facts-card-container,.sponsors-img-container{
         flex-direction: column;
         /* padding: 30px; */
     }
@@ -168,17 +194,23 @@ main{
     .teams-img-container{
         grid-template-columns: repeat(1, 1fr);
     }
-    .teams-content{
-        margin-top: 20px;
-        padding: 0px 30px;
+    .teams-content,.facts-card-container{
+        /* margin-top: 20px; */
+        padding: 10px;
 
+    }
+    .facts-card-container{
+        gap: 20px;
     }
     
 }
 
 /* medium devices */
-@media screen and (min-width: 576px) and (max-width: 960px) {   
-    nav, .teams-container{
+@media screen and (min-width: 576px) and (max-width: 960px) {
+    main{
+        padding: 30px;
+    }   
+    nav, .teams-container, .sponsors-img-container{
         flex-direction: column;
     }
     header{
@@ -191,5 +223,13 @@ main{
         /* margin-top: 20px; */
         padding: 30px;
 
+    }
+    .teams-content,.facts-card-container{
+        /* margin-top: 20px; */
+        padding: 10px;
+
+    }
+    .facts-card-container{
+        gap: 20px;
     }
 }
